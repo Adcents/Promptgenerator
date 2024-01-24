@@ -14,7 +14,7 @@
 
 <body>
 
-  <div class="container-xxl"> <!-- CONTAINER XXL - 1400px width -->
+  <div class="container"> <!-- CONTAINER XXL - 1400px width -->
     <br>
     <h1>Happy Horizon Promptgenerator</h1>
     <br>
@@ -34,10 +34,13 @@
             <h2 class="d-grid gap-2 d-md-flex justify-content-md-center">Genereer een...*</h2><br>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
               <button type="button" class="btn btn-primary btn-lg col-sm-2"
-                data-bs-toggle="button">Onderwerpsregel</button>
-              <button type="button" class="btn btn-primary btn-lg col-sm-2" data-bs-toggle="button">CTA</button>
-              <button type="button" class="btn btn-primary btn-lg col-sm-2" data-bs-toggle="button">Snippet</button>
-              <button type="button" class="btn btn-primary btn-lg col-sm-2" data-bs-toggle="button">Copy</button>
+                data-bs-toggle="button"><br><br>Onderwerpsregel<br><br><br></button>
+              <button type="button" class="btn btn-primary btn-lg col-sm-2"
+                data-bs-toggle="button"><br><br>CTA<br><br><br></button>
+              <button type="button" class="btn btn-primary btn-lg col-sm-2"
+                data-bs-toggle="button"><br><br>Snippet<br><br><br></button>
+              <button type="button" class="btn btn-primary btn-lg col-sm-2"
+                data-bs-toggle="button"><br><br>Copy<br><br><br></button>
             </div>
           </div>
         </div>
@@ -114,9 +117,9 @@
               <label for="bedrijfsrol" class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
                 <h3>De schrijfstijl van het stuk content is...*</h3>
               </label>
-              <label class="form-label">Omschrijf de tone of voice van de tekst. Hier kun je ook beschrijven of er woordgrappen moeten worden gebruikt in de tekst.</label>
-              <textarea class="form-control" id="bedrijfsrol"
-                placeholder="De schrijfstijl van het stuk content is...."
+              <label class="form-label">Omschrijf de tone of voice van de tekst. Hier kun je ook beschrijven of er
+                woordgrappen moeten worden gebruikt in de tekst.</label>
+              <textarea class="form-control" id="bedrijfsrol" placeholder="De schrijfstijl van het stuk content is...."
                 rows="3"></textarea>
             </div>
 
@@ -124,10 +127,12 @@
               <div class="col">
               </div>
               <div class="col-3 form-label d-grid gap-2 d-md-flex justify-content-md-center">
-                <label for="bedrijfsrol" class="form-label"><h3>Aantal varianten*&nbsp;&nbsp;</h3></label>
+                <label for="bedrijfsrol" class="form-label">
+                  <h3>Aantal varianten*&nbsp;&nbsp;</h3>
+                </label>
               </div>
               <div class="col"></div>
-              
+
               <div class="row ">
                 <div class="col"></div>
                 <div class="col-2 form-label d-grid gap-2 d-md-flex justify-content-md-center">
@@ -151,12 +156,103 @@
           </button>
         </h2>
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-            adds the appropriate classes that we use to style each element. These classes control the overall
-            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-            <code>.accordion-body</code>, though the transition does limit overflow.
+          <div class="accordion-body"><br>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
+                <h3>Email</h3>
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Campagnedoel*</h5>
+              </label><br>
+              <label class="form-label">Omschrijf wat voor e-mailcampagne het over gaat en wat de doel is van de
+                campagne.
+                Hierbij gaat het over marketingdoelstellingen, niet inhoud. Bijv. databaseverrijking, informeren,
+                heractivatie, transactioneel etc.</label>
+              <textarea class="form-control" id="bedrijfsrol" placeholder="Het doel van de campagne is..."
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Inhoud bericht*</h5>
+              </label><br>
+              <label class="form-label">Omschrijf de inhoud van het bericht dat het AI model moet gaan
+                versturen.</label>
+              <textarea class="form-control" id="bedrijfsrol" placeholder="Ik wil dat de ontvanger..."
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Doelgroep*</h5>
+              </label><br>
+              <label class="form-label">Omschrijf de eigenschappen van de doelgroep, welke metrics definiëren de
+                doelgroep.</label>
+              <textarea class="form-control" id="bedrijfsrol" placeholder="Het bericht is bedoelt voor..."
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
+                <h3>Wil je een Cialdini principe toevoegen?</h3>
+              </label>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                  data-bs-toggle="button"><br><br>Wederkerigheid<br><br><br></button>
+                <button type="button" class="btn btn-primary btn-lg col-lg-2" data-bs-toggle="button"><br><br>Commitment
+                  en consisentie<br><br><br></button>
+                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                  data-bs-toggle="button"><br><br>Schaarste<br><br><br></button>
+                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                  data-bs-toggle="button"><br><br>Sympathie<br><br><br></button>
+              </div><br>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                  data-bs-toggle="button"><br><br>Autoriteit<br><br><br></button>
+                <button type="button" class="btn btn-primary btn-lg col-lg-2" data-bs-toggle="button"><br><br>Sociale
+                  bewijskracht<br><br><br></button>
+                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                  data-bs-toggle="button"><br><br>Unity<br><br><br></button>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Inzet</h5>
+              </label><br>
+              <label class="form-label">Omschrijf hoe je het cialdini principe exact in wilt zetten. Laat leeg als de AI
+                dit mag bepalen.</label>
+              <textarea class="form-control" id="bedrijfsrol" placeholder="Het cialdini principe wordt gebruikt voor..."
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Seizoensgebonden events</h5>
+              </label><br>
+              <label class="form-label">Omschrijf de verwachtingen qua inhoud. Hierin kan weer, seizoen of speciale dag
+                meegenomen worden.</label>
+              <textarea class="form-control" id="bedrijfsrol" placeholder="" rows="3"></textarea>
+            </div>
+            <label for="bedrijfsrol" class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
+              <h5>Emoji</h5>
+            </label>
+            <div class="row">
+              <div class="col">
+
+              </div>
+              <div class="col-2">
+                <input type="radio" class="btn-check" name="btnradio1" id="emojiJA" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="emojiJA">Ja</label>
+
+                <input type="radio" class="btn-check" name="btnradio1" id="emojiNEE" autocomplete="off">
+                <label class="btn btn-outline-primary" for="emojiNEE">Nee</label>
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control" id="formatnumber"
+                  placeholder="Omschrijf welke emojis er gebruikt mogen worden.">
+              </div>
+              <div class="col">
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -171,12 +267,61 @@
         </h2>
         <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-            adds the appropriate classes that we use to style each element. These classes control the overall
-            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-            <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="mb-3">
+              <label for="bedrijfsnaam" class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
+                <h3>Ondersteunende content</h3>
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsnaam" class="form-label text-center">
+                Geef hieronder ondersteunende content mee voor in de mail. Dit is content die mogelijk al geschreven is
+                voor de email.
+                Het AI model zal de inhoud meenemen in de AI gegenereerde content.
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Onderwerpsregel</h5>
+              </label><br>
+              <textarea class="form-control" id="bedrijfsrol"
+                placeholder="Ondersteunende onderwerpsregel"
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Copy</h5>
+              </label><br>
+              <textarea class="form-control" id="bedrijfsrol"
+                placeholder="Ondersteunende tekst"
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Snippet</h5>
+              </label><br>
+              <textarea class="form-control" id="bedrijfsrol"
+                placeholder="Ondersteunende snippets"
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>CTA</h5>
+              </label><br>
+              <textarea class="form-control" id="bedrijfsrol"
+                placeholder="Ondersteunende Call-To-Action"
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="bedrijfsrol" class="form-label">
+                <h5>Definitie van succes</h5>
+              </label><br>
+              <label class="form-label">Geef hier een mail die gezien kan worden als succes. Dit mag een voorbeeld zijn van een andere klant. </label>
+              <textarea class="form-control" id="bedrijfsrol"
+                placeholder="Een succesvolle mail betreft...."
+                rows="3"></textarea>
+            </div>
           </div>
+
         </div>
       </div>
 
