@@ -1,5 +1,8 @@
 let generate = document.getElementById('buttonGenerate');
 
+let publicStringTaak;
+let publicStringCial;
+
     document.addEventListener("DOMContentLoaded", function() {
         const buttons = document.querySelectorAll("#btnTaak");
         const selectedValues = [];
@@ -21,7 +24,10 @@ let generate = document.getElementById('buttonGenerate');
       
         function updateSelectedValues() {
           const selectedStringTaak = selectedValues.join(" & ");
-          console.log(selectedStringTaak); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
+
+            publicStringTaak = selectedStringTaak;
+
+        //   console.log(selectedStringTaak); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
         }
       });
 
@@ -46,7 +52,10 @@ let generate = document.getElementById('buttonGenerate');
       
         function updateSelectedValues() {
           const selectedStringCial = selectedValues.join(" & ");
-          console.log(selectedStringCial); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
+          
+          publicStringCial = selectedStringCial;
+          
+        //   console.log(selectedStringCial); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
         }
       });
 
@@ -70,6 +79,25 @@ let generate = document.getElementById('buttonGenerate');
     });
 
 function buttonClick1() {
+
+
+    
+    if (!publicStringCial) {
+        console.log('cialdini is leeg');
+    }
+    else{
+        console.log('De gekozen cialdini principes zijn:', publicStringCial)
+    }
+
+    // console.log('De ontwerpen content is:', publicStringTaak)
+    
+    if (!publicStringTaak) {
+        console.log('taak is leeg');
+    }
+    else{
+        console.log('De ontwerpen content is:', publicStringTaak)
+    }
+    
 
     // //test    
     // let bedrijfsnaam = document.getElementById('bedrijfsnaam');
