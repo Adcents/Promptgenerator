@@ -20,8 +20,8 @@ let generate = document.getElementById('buttonGenerate');
         });
       
         function updateSelectedValues() {
-          const selectedString = selectedValues.join(" & ");
-          console.log(selectedString); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
+          const selectedStringTaak = selectedValues.join(" & ");
+          console.log(selectedStringTaak); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
         }
       });
 
@@ -45,8 +45,8 @@ let generate = document.getElementById('buttonGenerate');
         });
       
         function updateSelectedValues() {
-          const selectedString = selectedValues.join(" & ");
-          console.log(selectedString); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
+          const selectedStringCial = selectedValues.join(" & ");
+          console.log(selectedStringCial); // Hier kun je de geselecteerde waarden gebruiken zoals je wilt, voor nu een console log.
         }
       });
 
