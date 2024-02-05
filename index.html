@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Promptgenerator</title>
+  <link rel="icon" type="image/x-icon" src="/img/hhicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -62,7 +63,8 @@
             <h1>Task</h1>
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div id="collapseOne" class="accordion-collapse collapse show" >
+          <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body">
             <h2 class="d-grid gap-2 d-md-flex justify-content-md-center">Genereer een...*</h2><br>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
@@ -74,6 +76,12 @@
           </div>
         </div>
       </div>
+      
+      <!-- verwijder dit tot comment voor combined accordion -->
+
+    </div><br>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
 
       <!-- ROLE -->
       <div class="accordion-item">
@@ -82,7 +90,8 @@
             <h1>Role</h1>
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div id="collapseTwo" class="accordion-collapse collapse" >
+          <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body d-grid justify-content-md-center">
             <div class="mb-3">
               <label for="bedrijfsnaam" class="form-label">
@@ -103,6 +112,12 @@
           </div>
         </div>
       </div>
+      
+      <!-- verwijder dit tot comment voor combined accordion -->
+
+    </div><br>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
 
       <!-- ATTRIBUTES  d-grid justify-content-md-center -->
       <div class="accordion-item">
@@ -112,7 +127,8 @@
             <h1>Attributes</h1>
           </button>
         </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div id="collapseFour" class="accordion-collapse collapse" >
+          <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body"><br>
             <div class="mb-3">
               <label for="bedrijfsnaam" class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
@@ -173,6 +189,12 @@
         </div>
       </div>
 
+      <!-- verwijder dit tot comment voor combined accordion -->
+
+    </div><br>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
       <!-- CONTEXT -->
       <div class="accordion-item">
         <h2 class="accordion-header">
@@ -181,7 +203,8 @@
             <h1>Context</h1>
           </button>
         </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div id="collapseFive" class="accordion-collapse collapse" > 
+          <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body"><br>
             <div class="mb-3">
               <label for="bedrijfsrol" class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
@@ -287,6 +310,12 @@
         </div>
       </div>
 
+      <!-- verwijder dit tot comment voor combined accordion -->
+
+    </div><br>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
       <!-- EXAMPLES -->
       <div class="accordion-item">
         <h2 class="accordion-header">
@@ -295,7 +324,8 @@
             <h1>Examples</h1>
           </button>
         </h2>
-        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div id="collapseSix" class="accordion-collapse collapse" >
+          <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body">
             <div class="mb-3 d-grid justify-content-md-center">
               <label for="bedrijfsnaam" class="form-label">
@@ -352,6 +382,12 @@
         </div>
       </div>
 
+      <!-- verwijder dit tot comment voor combined accordion -->
+
+    </div><br>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
       <!-- GENERATE -->
       <div class="accordion-item">
         <h2 class="accordion-header">
@@ -360,17 +396,30 @@
             <h1>Generate</h1>
           </button>
         </h2>
-        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div id="collapseSeven" class="accordion-collapse collapse" >
+          <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body">
+            <div class="mb-3">
+            </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
               <button type="submit" class="btn btn-primary btn-lg col-sm-2"
-                data-bs-toggle="button" id="buttonGenerate" onclick="buttonClick1()"><br><br>GENERATE!<br><br><br></button>
+                id="buttonGenerate" onclick="buttonClick1()"><br><br>GENERATE!<br><br><br></button>
+            </div><br><br>
+            <div class="mb-3">
+              <label class="form-label d-grid gap-2 d-md-flex justify-content-md-center">
+                <h3>Results</h3>
+              </label>
             </div>
+            <div class="mb-3 d-grid justify-content-md-center">
+
+            <textarea class="form-control" id="results" placeholder=""
+                  rows="10" style="width: 800px;"></textarea>
+                  </div>
+            
           </div>
         </div>
       </div>
-
-
+      <br><br><br>
     </div>
   </div>
 </body>

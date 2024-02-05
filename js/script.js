@@ -102,20 +102,25 @@ function buttonClick1() {
     }
 
     // Als de publicInputs niet leeg is dan doe je de string loggen
-    // #1
 
+    // #1
     if(publicObjectInputs.bedrijfsnaam) {
-        console.log('Je schrijft het stuk content voor', publicObjectInputs.bedrijfsnaam);
+        let resultBedrijfsnaam = 'Je schrijft het stuk content voor ' + publicObjectInputs.bedrijfsnaam;
+
+        console.log(resultBedrijfsnaam)
     }
 
     // #2
     if(publicObjectInputs.bedrijfsrol) {
+        let resultBedrijfsrol = publicObjectInputs.bedrijfsrol;
+        
         console.log(publicObjectInputs.bedrijfsrol);
     }
 
     // #3
     if(publicObjectInputs.formatAantal) {
-        console.log(publicObjectInputs.formatAantal);
+        let resultFormatAantal = publicObjectInputs.formatAantal;
+        console.log(resultFormatAantal);
     }
 
     // #4
