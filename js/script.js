@@ -3,8 +3,8 @@ let generate = document.getElementById('buttonGenerate');
 let publicStringTaak;
 let publicStringCial;
 let publicObjectInputs;
-let publicRadioFormat;
-let publicRadioEmoji;
+let publicRadioFormat = 'woorden';
+let publicRadioEmoji = true;
 
     document.addEventListener("DOMContentLoaded", function() {
         const buttons = document.querySelectorAll("#btnTaak");
@@ -127,10 +127,12 @@ function buttonClick1() {
 
     
     if (!publicStringCial) {
-        // console.log('cialdini is leeg');
+        console.log('cialdini is leeg');
+        resultCialdini = '';
     }
     else{
         console.log('De gekozen cialdini principes zijn:', publicStringCial)
+        resultCialdini = 'De gekozen cialdini principes zijn: ' + publicStringCial;
     }
 
     // console.log('De ontwerpen content is:', publicStringTaak)
@@ -139,77 +141,78 @@ function buttonClick1() {
         console.log('taak is leeg');
     }
     else{
-        console.log('De ontwerpen content is:', publicStringTaak)
+        console.log('De te ontwerpen content is:', publicStringTaak)
+        resultTaak = 'De te ontwerpen content is: ' +  publicStringTaak;
     }
 
     // Als de publicInputs niet leeg is dan doe je de string loggen
 
-    // #1
+    // #1 Role -> Bedrijfsnaam
     if(publicObjectInputs.bedrijfsnaam) {
-        let resultBedrijfsnaam = 'Je schrijft het stuk content voor ' + publicObjectInputs.bedrijfsnaam;
+        resultBedrijfsnaam = 'Je schrijft het stuk content voor ' + publicObjectInputs.bedrijfsnaam + '.';
 
         console.log(resultBedrijfsnaam)
     }
 
-    // #2
+    // #2 Role -> Bedrijfsrol
     if(publicObjectInputs.bedrijfsrol) {
-        let resultBedrijfsrol = publicObjectInputs.bedrijfsrol;
+        resultBedrijfsrol = publicObjectInputs.bedrijfsrol;
         
         console.log(publicObjectInputs.bedrijfsrol);
     }
 
-    // #3
+    // #3 Attributes -> formatAantal
     if(publicObjectInputs.formatAantal) {
-        let resultFormatAantal = 'De tekst mag maximaal ' + publicObjectInputs.formatAantal + ' ' + publicRadioFormat + ' lang zijn';
+        resultFormatAantal = 'De tekst mag maximaal ' + publicObjectInputs.formatAantal + ' ' + publicRadioFormat + ' lang zijn';
 
         console.log(resultFormatAantal);
     }
 
-    // #4
+    // #4 Attributes -> schrijfstijl
     if(publicObjectInputs.schrijfstijl) {
-        let resultSchrijftstijl = publicObjectInputs.schrijfstijl;
+        resultSchrijftstijl = publicObjectInputs.schrijfstijl;
 
         console.log(resultSchrijftstijl);
     }
 
-    // #5
+    // #5 Attributes -> Varianten aantal
     if(publicObjectInputs.variantAantal) {
-        let resultVariantAantal = 'Ik wil graag ' + publicObjectInputs.variantAantal + ' verschillende varianten.';
+        resultVariantAantal = 'Ik wil graag ' + publicObjectInputs.variantAantal + ' verschillende varianten.';
     
         console.log(resultVariantAantal);
     }
 
-    // #6
+    // #6 Context -> Campagnedoel
     if(publicObjectInputs.campagnedoel) {
-        let resultCampagnedoel = publicObjectInputs.campagnedoel;
+        resultCampagnedoel = publicObjectInputs.campagnedoel;
 
         console.log(resultCampagnedoel);
     }
 
-    // #7
+    // #7 Context -> Inhoud bericht
     if(publicObjectInputs.inhoudbericht) {
-        let resultInhoudbericht = publicObjectInputs.inhoudbericht;
+        resultInhoudbericht = publicObjectInputs.inhoudbericht;
 
         console.log(resultInhoudbericht);
     }
     
-    // #8
+    // #8 Context -> Doelgroep
     if(publicObjectInputs.doelgroep) {
-        let resultDoelgroep = publicObjectInputs.doelgroep;
+        resultDoelgroep = publicObjectInputs.doelgroep;
     
         console.log(resultDoelgroep);
     }
     
     // #9
-    if(publicObjectInputs.cialdinieExtra) {
-        let resultCialdiniExtra = publicObjectInputs.cialdinieExtra;
+    // if(publicObjectInputs.cialdinieExtra) {
+    //     resultCialdiniExtra = publicObjectInputs.cialdinieExtra;
 
-        console.log(resultCialdiniExtra);
-    }
+    //     console.log(resultCialdiniExtra);
+    // }
     
     // #10
     if(publicObjectInputs.seasonal) {
-        let resultSeasonal = publicObjectInputs.seasonal;
+        resultSeasonal = publicObjectInputs.seasonal;
 
         console.log(resultSeasonal);
     }
@@ -217,48 +220,74 @@ function buttonClick1() {
     // #11
     if(publicObjectInputs.emojiExtra) {
         if(publicRadioEmoji == true){
-        let resultEmojiExtra = 'De emojis die gebruikt mogen worden zijn: ' + publicObjectInputs.emojiExtra;
+        resultEmojiExtra = 'De emojis die gebruikt mogen worden zijn: ' + publicObjectInputs.emojiExtra;
 
         console.log(resultEmojiExtra);
+        }
+        else{
+            resultEmojiExtra = '';
         }
     }
     
     // #12
     if(publicObjectInputs.onderwerpsregelOS) {
-        let resultOnderwerpsregelOS = 'Deze onderwerpsregel is al geschreven voor de e-mail: "' + publicObjectInputs.onderwerpsregelOS + '"';
+        resultOnderwerpsregelOS = 'Deze onderwerpsregel is al geschreven voor de e-mail: "' + publicObjectInputs.onderwerpsregelOS + '"';
         
         console.log(resultOnderwerpsregelOS);
+    }
+    else{
+        resultOnderwerpsregelOS = '';
     }
     
     // #13
     if(publicObjectInputs.copyOS) {
-        let resultCopyOS = 'Deze copy is al geschreven voor de e-mail: "' + publicObjectInputs.copyOS + '"';
+        resultCopyOS = 'Deze copy is al geschreven voor de e-mail: "' + publicObjectInputs.copyOS + '"';
 
         console.log(resultCopyOS);
+    }
+    else{
+        resultCopyOS = '';
     }
     
     // #14
     if(publicObjectInputs.SnippetOS) {
-        let resultSnippetOS = 'Deze snippet is al geschreven voor de e-mail: "' + publicObjectInputs.SnippetOS + '"';
+        resultSnippetOS = 'Deze snippet is al geschreven voor de e-mail: "' + publicObjectInputs.SnippetOS + '"';
 
         console.log(resultSnippetOS);
+    }
+    else{
+        resultSnippetOS = '';
     }
     
     // #15
     if(publicObjectInputs.ctaOS) {
-        let resultCtaOS = 'Deze Call to action is al geschreven voor de e-mail: "' + publicObjectInputs.ctaOS + '"';
+        resultCtaOS = 'Deze Call to action is al geschreven voor de e-mail: "' + publicObjectInputs.ctaOS + '"';
 
         console.log(resultCtaOS);
+    }
+    else{
+        resultCtaOS = '';
     }
     
     // #16
     if(publicObjectInputs.succesdefinitie) {
-        let resultSuccesDefinitie = 'Deze voorbeeldmail is een succesvolle mail, de structuur van deze mail mag gebruikt worden als voorbeeld, inhoud niet: "' + publicObjectInputs.succesdefinitie + '"';
+        resultSuccesDefinitie = 'Deze voorbeeldmail is een succesvolle mail, de structuur van deze mail mag gebruikt worden als voorbeeld, inhoud niet: "' + publicObjectInputs.succesdefinitie + '"';
 
-        console.log(resultCtaOS);
+        console.log(resultSuccesDefinitie);
     }
-    
 
+    // COMBINEREN VAN DE LOSSE VARIABELEN
+
+    let completeTask = resultTaak;
+    let completeRole = resultBedrijfsnaam + "\n" + resultBedrijfsrol;
+    let completeAttributes = resultFormatAantal + "\n" + resultSchrijftstijl + "\n" + resultVariantAantal;
+    let completeContext = resultCampagnedoel + "\n" + resultInhoudbericht + "\n" + resultDoelgroep + "\n" + resultCialdini + "\n" + resultSeasonal + "\n" + resultEmojiExtra;
+    let completeExamples = resultOnderwerpsregelOS + "\n" + resultCopyOS + "\n" + resultSnippetOS + "\n" + resultCtaOS;
+ 
+    let completeText = completeTask + "\n\n" + completeRole + "\n\n"  + completeAttributes  + "\n\n"  + completeContext + "\n\n"  + completeExamples + "\n\n"; // Voeg \n toe voor nieuwe regels
+  
+    // Toewijzen van de samengestelde tekst aan het textarea element
+    document.getElementById("results").value = completeText;
     
 
     // //test    
