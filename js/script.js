@@ -119,73 +119,100 @@ function buttonClick1() {
 
     // #3
     if(publicObjectInputs.formatAantal) {
-        let resultFormatAantal = publicObjectInputs.formatAantal;
+        let resultFormatAantal = 'De tekst moet maximaal ' + publicObjectInputs.formatAantal + 'woorden/letters' + 'lang zijn';
+
         console.log(resultFormatAantal);
     }
 
     // #4
     if(publicObjectInputs.schrijfstijl) {
-        console.log(publicObjectInputs.schrijfstijl);
+        let resultSchrijftstijl = publicObjectInputs.schrijfstijl;
+
+        console.log(resultSchrijftstijl);
     }
 
     // #5
     if(publicObjectInputs.variantAantal) {
-        console.log(publicObjectInputs.variantAantal);
+        let resultVariantAantal = 'Ik wil graag' + publicObjectInputs.variantAantal + 'verschillende varianten.';
+    
+        console.log(resultVariantAantal);
     }
 
     // #6
     if(publicObjectInputs.campagnedoel) {
-        console.log(publicObjectInputs.campagnedoel);
+        let resultCampagnedoel = publicObjectInputs.campagnedoel;
+
+        console.log(resultCampagnedoel);
     }
 
     // #7
     if(publicObjectInputs.inhoudbericht) {
-        console.log(publicObjectInputs.inhoudbericht);
+        let resultInhoudbericht = publicObjectInputs.inhoudbericht;
+
+        console.log(resultInhoudbericht);
     }
     
     // #8
     if(publicObjectInputs.doelgroep) {
-        console.log(publicObjectInputs.doelgroep);
+        let resultDoelgroep = publicObjectInputs.doelgroep;
+    
+        console.log(resultDoelgroep);
     }
     
     // #9
     if(publicObjectInputs.cialdinieExtra) {
-        console.log(publicObjectInputs.cialdinieExtra);
+        let resultCialdiniExtra = publicObjectInputs.cialdinieExtra;
+
+        console.log(resultCialdiniExtra);
     }
     
     // #10
     if(publicObjectInputs.seasonal) {
-        console.log(publicObjectInputs.seasonal);
+        let resultSeasonal = publicObjectInputs.seasonal;
+
+        console.log(resultSeasonal);
     }
     
     // #11
     if(publicObjectInputs.emojiExtra) {
-        console.log(publicObjectInputs.emojiExtra);
+        let resultEmojiExtra = 'De emojis die gebruikt mogen worden zijn: ' + publicObjectInputs.emojiExtra;
+
+        console.log(resultEmojiExtra);
     }
     
     // #12
     if(publicObjectInputs.onderwerpsregelOS) {
-        console.log(publicObjectInputs.onderwerpsregelOS);
+        let resultOnderwerpsregelOS = 'Deze onderwerpsregel is al geschreven voor de e-mail: "' + publicObjectInputs.onderwerpsregelOS + '"';
+        
+        console.log(resultOnderwerpsregelOS);
     }
     
     // #13
     if(publicObjectInputs.copyOS) {
-        console.log(publicObjectInputs.copyOS);
+        let resultCopyOS = 'Deze copy is al geschreven voor de e-mail: "' + publicObjectInputs.copyOS + '"';
+
+        console.log(resultCopyOS);
     }
     
     // #14
     if(publicObjectInputs.SnippetOS) {
-        console.log(publicObjectInputs.SnippetOS);
+        let resultSnippetOS = 'Deze snippet is al geschreven voor de e-mail: "' + publicObjectInputs.SnippetOS + '"';
+
+        console.log(resultSnippetOS);
     }
     
     // #15
     if(publicObjectInputs.ctaOS) {
-        console.log(publicObjectInputs.ctaOS);
+        let resultCtaOS = 'Deze Call to action is al geschreven voor de e-mail: "' + publicObjectInputs.ctaOS + '"';
+
+        console.log(resultCtaOS);
     }
     
     // #16
     if(publicObjectInputs.succesdefinitie) {
-        console.log(publicObjectInputs.succesdefinitie);
+        let resultSuccesDefinitie = 'Deze voorbeeldmail is een succesvolle mail, de structuur van deze mail mag gebruikt worden als voorbeeld, inhoud niet: "' + publicObjectInputs.succesdefinitie + '"';
+
+        console.log(resultCtaOS);
     }
     
 
