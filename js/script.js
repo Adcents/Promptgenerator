@@ -3,6 +3,8 @@ let generate = document.getElementById('buttonGenerate');
 let publicStringTaak;
 let publicStringCial;
 let publicObjectInputs;
+let publicRadioFormat;
+let publicRadioEmoji;
 
     document.addEventListener("DOMContentLoaded", function() {
         const buttons = document.querySelectorAll("#btnTaak");
@@ -81,6 +83,45 @@ let publicObjectInputs;
         publicObjectInputs = inputWaarden;
     });
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const radioButtons = document.querySelectorAll('input[name="btnradio"]');
+        
+        radioButtons.forEach(radio => {
+          radio.addEventListener('change', function() {
+            if(this.checked) {
+              if(this.id == 'btnradio1'){
+                publicRadioFormat = 'woorden';
+              }
+              if(this.id == 'btnradio2'){
+                publicRadioFormat = 'letters';
+              }
+            // Gebruik onderstaand console log om te testen.
+            // console.log(publicRadioFormat);
+            }
+          });
+        });
+      });
+
+      
+    document.addEventListener('DOMContentLoaded', () => {
+        const radioButtons = document.querySelectorAll('input[name="btnradioEmoji"]');
+        
+        radioButtons.forEach(radio => {
+          radio.addEventListener('change', function() {
+            if(this.checked) {
+              if(this.id == 'emojiJA'){
+                publicRadioEmoji = true;
+              }
+              if(this.id == 'emojiNEE'){
+                publicRadioEmoji = false;
+              }
+            // Gebruik onderstaand console log om te testen.
+            console.log(publicRadioEmoji);
+            }
+          });
+        });
+      });
+
 function buttonClick1() {
 
 
@@ -119,7 +160,7 @@ function buttonClick1() {
 
     // #3
     if(publicObjectInputs.formatAantal) {
-        let resultFormatAantal = 'De tekst moet maximaal ' + publicObjectInputs.formatAantal + 'woorden/letters' + 'lang zijn';
+        let resultFormatAantal = 'De tekst mag maximaal ' + publicObjectInputs.formatAantal + ' ' + publicRadioFormat + ' lang zijn';
 
         console.log(resultFormatAantal);
     }
@@ -133,7 +174,7 @@ function buttonClick1() {
 
     // #5
     if(publicObjectInputs.variantAantal) {
-        let resultVariantAantal = 'Ik wil graag' + publicObjectInputs.variantAantal + 'verschillende varianten.';
+        let resultVariantAantal = 'Ik wil graag ' + publicObjectInputs.variantAantal + ' verschillende varianten.';
     
         console.log(resultVariantAantal);
     }
@@ -175,9 +216,11 @@ function buttonClick1() {
     
     // #11
     if(publicObjectInputs.emojiExtra) {
+        if(publicRadioEmoji == true){
         let resultEmojiExtra = 'De emojis die gebruikt mogen worden zijn: ' + publicObjectInputs.emojiExtra;
 
         console.log(resultEmojiExtra);
+        }
     }
     
     // #12
