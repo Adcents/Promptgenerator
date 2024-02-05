@@ -138,7 +138,7 @@ function buttonClick1() {
     // console.log('De ontwerpen content is:', publicStringTaak)
     
     if (!publicStringTaak) {
-        console.log('taak is leeg');
+        alert('taak is leeg');
     }
     else{
         console.log('De te ontwerpen content is:', publicStringTaak)
@@ -216,6 +216,9 @@ function buttonClick1() {
 
         console.log(resultSeasonal);
     }
+    else{
+        resultSeasonal = '';
+    }
     
     // #11
     if(publicObjectInputs.emojiExtra) {
@@ -224,10 +227,11 @@ function buttonClick1() {
 
         console.log(resultEmojiExtra);
         }
-        else{
+      
+    }  
+    else{
             resultEmojiExtra = '';
         }
-    }
     
     // #12
     if(publicObjectInputs.onderwerpsregelOS) {
@@ -269,33 +273,71 @@ function buttonClick1() {
         resultCtaOS = '';
     }
     
-    // #16
-    if(publicObjectInputs.succesdefinitie) {
-        resultSuccesDefinitie = 'Deze voorbeeldmail is een succesvolle mail, de structuur van deze mail mag gebruikt worden als voorbeeld, inhoud niet: "' + publicObjectInputs.succesdefinitie + '"';
+    const verplichteVelden = document.querySelectorAll('.form-control[required]');
 
-        console.log(resultSuccesDefinitie);
+    // Array om bij te houden welke velden leeg zijn
+    let legeVelden = [];
+    let ingevuldeVelden = [];
+
+    verplichteVelden.forEach(veld => {
+        if (!veld.value) {
+            // Veld is leeg
+            legeVelden.push(veld.id || veld.name); // Gebruik id of name als fallback
+            veld.style.borderColor = 'red'; // Optioneel: markeer het veld visueel als leeg/niet ingevuld
+        } else {
+            // Veld is ingevuld
+            ingevuldeVelden.push(veld.id || veld.name);
+            veld.style.borderColor = ''; // Reset de stijl
+        }
+    });
+
+    // Feedback geven over lege en ingevulde velden
+    if (legeVelden.length > 0) {
+        alert('Deze velden moeten nog ingevuld worden:' + legeVelden.join(', '));
     }
+
+    if (ingevuldeVelden.length > 0) {
+        console.log('Correct ingevulde velden:', ingevuldeVelden.join(', '));
+    }
+
+    // Voeg logica toe om te bepalen wat er moet gebeuren als er lege velden zijn
+    if (legeVelden.length === 0) {
+        // Alle velden zijn ingevuld, ga verder met de volgende stap
+        console.log('Alle velden zijn correct ingevuld.');
+    }
+    // #16
+    // if(publicObjectInputs.succesdefinitie) {
+    //     resultSuccesDefinitie = 'Deze voorbeeldmail is een succesvolle mail, de structuur van deze mail mag gebruikt worden als voorbeeld, inhoud niet: "' + publicObjectInputs.succesdefinitie + '"';
+
+    //     console.log(resultSuccesDefinitie);
+    // }
 
     // COMBINEREN VAN DE LOSSE VARIABELEN
 
     let completeTask = resultTaak;
     let completeRole = resultBedrijfsnaam + "\n" + resultBedrijfsrol;
     let completeAttributes = resultFormatAantal + "\n" + resultSchrijftstijl + "\n" + resultVariantAantal;
-    let completeContext = resultCampagnedoel + "\n" + resultInhoudbericht + "\n" + resultDoelgroep + "\n" + resultCialdini + "\n" + resultSeasonal + "\n" + resultEmojiExtra;
-    let completeExamples = resultOnderwerpsregelOS + "\n" + resultCopyOS + "\n" + resultSnippetOS + "\n" + resultCtaOS;
- 
-    let completeText = completeTask + "\n\n" + completeRole + "\n\n"  + completeAttributes  + "\n\n"  + completeContext + "\n\n"  + completeExamples + "\n\n"; // Voeg \n toe voor nieuwe regels
+
+    // Filter de array om alleen niet-lege strings te behouden en voeg ze samen
+    let completeContext = [resultCampagnedoel, resultInhoudbericht, resultDoelgroep, resultCialdini, resultSeasonal, resultEmojiExtra]
+    .filter(text => text !== '')
+    .join("\n");
+
+    let completeExamples = [resultOnderwerpsregelOS, resultCopyOS, resultSnippetOS, resultCtaOS]
+    .filter(text => text !== '')
+    .join("\n");
+
+    let variabelen = [completeTask, completeRole, completeAttributes, completeContext, completeExamples];
   
+    let completeText = variabelen.filter(text => text !== '').join("\n\n")
+
     // Toewijzen van de samengestelde tekst aan het textarea element
     document.getElementById("results").value = completeText;
-    
 
-    // //test    
-    // let bedrijfsnaam = document.getElementById('bedrijfsnaam');
-    // let bedrijfsrol = document.getElementById('bedrijfsrol');
-
+     // let completeContext = resultCampagnedoel + "\n" + resultInhoudbericht + "\n" + resultDoelgroep + "\n" + resultCialdini + "\n" + resultSeasonal + "\n" + resultEmojiExtra;
+    // let completeExamples = resultOnderwerpsregelOS + "\n" + resultCopyOS + "\n" + resultSnippetOS + "\n" + resultCtaOS;
+    // let completeText = completeTask + "\n\n" + completeRole + "\n\n"  + completeAttributes  + "\n\n"  + completeContext + "\n\n"  + completeExamples + "\n\n"; // Voeg \n toe voor nieuwe regels
 
 
-    // console.log('bedrijfsnaam: '+bedrijfsnaam.value)
-    // console.log('bedrijfsrol: '+bedrijfsrol.value)
+
 }
