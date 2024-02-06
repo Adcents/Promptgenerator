@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-
+    <script src="https://kit.fontawesome.com/129c0139bb.js" crossorigin="anonymous"></script>
 
   
     <!-- 
@@ -48,6 +48,104 @@
     -->
 </head>
 <body>
+  <style>
+   /* Basisstijl voor de knop */
+.btn-task {
+    background-color: white;
+    border: 1px solid grey;
+    color: black;
+}
+
+/* Hover stijl */
+.btn-task:hover {
+    /* background-color: #FF725E;  */
+    border-color: #FF725E; 
+    color: black;
+}
+
+/* Actieve (geselecteerde) stijl */
+.btn-task.active{
+    background-color: #FF725E !important;
+    border-color: #FF725E !important;
+    color: white !important;
+}
+
+.btn-context {
+    background-color: white;
+    border: 1px solid grey;
+    color: black;
+}
+
+/* Hover stijl */
+.btn-context:hover {
+    /* background-color: #FF725E;  */
+    border-color: #92E3A9; 
+    color: black;
+}
+
+/* Actieve (geselecteerde) stijl */
+.btn-context.active{
+    background-color: #92E3A9 !important;
+    border-color: #92E3A9 !important;
+    color: white !important;
+}
+
+.btn-generate {
+    background-color: white;
+    border: 1px solid grey;
+    color: black;
+}
+
+/* Hover stijl */
+.btn-generate:hover {
+    background-color: #FF725E; 
+    border-color: #FF8202; 
+    color: black;
+}
+
+/* Actieve (geselecteerde) stijl */
+.btn-generate.active{
+    background-color: #FF8202 !important;
+    border-color: #FF8202 !important;
+    color: white !important;
+}
+
+.btn-outline-primary1 {
+    --bs-btn-color: #FFAB5E;
+    --bs-btn-border-color: #FFAB5E;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #FFAB5E;
+    --bs-btn-hover-border-color: #FFAB5E;
+    --bs-btn-focus-shadow-rgb: 13,110,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #FFAB5E;
+    --bs-btn-active-border-color: #FFAB5E;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #FFAB5E;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #FFAB5E;
+    --bs-gradient: none;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #23AB4A;
+    --bs-btn-border-color: #23AB4A;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #23AB4A;
+    --bs-btn-hover-border-color: #23AB4A;
+    --bs-btn-focus-shadow-rgb: 13,110,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #23AB4A;
+    --bs-btn-active-border-color: #23AB4A;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #23AB4A;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #23AB4A;
+    --bs-gradient: none;
+}
+
+
+  </style>
   <div class="container"> <!-- CONTAINER XXL - 1400px width -->
     <br>
     <h1>Happy Horizon Promptgenerator</h1>
@@ -56,22 +154,22 @@
     <div class="accordion" id="accordionExample">
 
       <!-- TASK -->
-      <div class="accordion-item">
+      <div class="accordion-item" style="border-color: #FF725E; border-width: 2px;">
         <h2 class="accordion-header">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne">
+            aria-expanded="true" aria-controls="collapseOne" style="background-color:#FFF4F3; box-shadow: 0px 0px">
             <h1>Task</h1>
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" >
+        <div id="collapseOne" class="accordion-collapse collapse show" style="background-color:#FFF4F3">
           <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body">
             <h2 class="d-grid gap-2 d-md-flex justify-content-md-center">Genereer een...*</h2><br>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-              <button type="button" class="btn btn-primary btn-lg col-sm-2" data-bs-toggle="button" id="btnTaak"><br><br>Onderwerpsregel<br><br><br></button>
-              <button type="button" class="btn btn-primary btn-lg col-sm-2" data-bs-toggle="button" id="btnTaak"><br><br>CTA<br><br><br></button>
-              <button type="button" class="btn btn-primary btn-lg col-sm-2" data-bs-toggle="button" id="btnTaak"><br><br>Snippet<br><br><br></button>
-              <button type="button" class="btn btn-primary btn-lg col-sm-2" data-bs-toggle="button" id="btnTaak"><br><br>Copy<br><br><br></button>
+              <button type="button" class="btn btn-lg col-sm-2 btn-task" data-bs-toggle="button" id="btnTaak"><br><br>Onderwerpsregel<br><br><br></button>
+              <button type="button" class="btn btn-lg col-sm-2 btn-task" data-bs-toggle="button" id="btnTaak"><br><br>CTA<br><br><br></button>
+              <button type="button" class="btn btn-lg col-sm-2 btn-task" data-bs-toggle="button" id="btnTaak"><br><br>Snippet<br><br><br></button>
+              <button type="button" class="btn btn-lg col-sm-2 btn-task" data-bs-toggle="button" id="btnTaak"><br><br>Copy<br><br><br></button>
             </div>
           </div>
         </div>
@@ -84,13 +182,13 @@
     <div class="accordion" id="accordionPanelsStayOpenExample">
 
       <!-- ROLE -->
-      <div class="accordion-item">
+      <div class="accordion-item" style="border-color: #407BFF; border-width: 2px;">
         <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"  style="background-color:#F0F4FF; box-shadow: 0px 0px">
             <h1>Role</h1>
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" >
+        <div id="collapseTwo" class="accordion-collapse collapse" style="background-color:#F0F4FF">
           <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body d-grid justify-content-md-center">
             <div class="mb-3">
@@ -120,14 +218,14 @@
     <div class="accordion" id="accordionPanelsStayOpenExample">
 
       <!-- ATTRIBUTES  d-grid justify-content-md-center -->
-      <div class="accordion-item">
+      <div class="accordion-item" style="border-color: #FFC100; border-width: 2px;">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color:#FFFAEB; box-shadow: 0px 0px">
             <h1>Attributes</h1>
           </button>
         </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" >
+        <div id="collapseFour" class="accordion-collapse collapse" style="background-color:#FFFAEB;">
           <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body"><br>
             <div class="mb-3">
@@ -143,10 +241,10 @@
                 </div>
                 <div class="col-2">
                   <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                  <label class="btn btn-outline-primary" for="btnradio1">Woorden</label>
+                  <label class="btn btn-outline-primary1" for="btnradio1">Woorden</label>
 
                   <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="btnradio2">Letters</label>
+                  <label class="btn btn-outline-primary1" for="btnradio2">Letters</label>
                 </div>
                 <div class="col-2">
                   <input type="number" class="form-control" id="formatAantal" placeholder="0" required>
@@ -196,14 +294,14 @@
     <div class="accordion" id="accordionPanelsStayOpenExample">
 
       <!-- CONTEXT -->
-      <div class="accordion-item">
+      <div class="accordion-item" style="border-color: #92E3A9; border-width: 2px;">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="background-color:#F7FDF9; box-shadow: 0px 0px">
             <h1>Context</h1>
           </button>
         </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" > 
+        <div id="collapseFive" class="accordion-collapse collapse" style="background-color:#F7FDF9"> 
           <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body"><br>
             <div class="mb-3">
@@ -247,19 +345,19 @@
                 <h3>Wil je een Cialdini principe toevoegen?</h3>
               </label>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                <button type="button" class="btn btn-context btn-lg col-lg-2"
                   data-bs-toggle="button" id="cialdiniknop"><br><br>Wederkerigheid<br><br><br></button>
-                <button type="button" class="btn btn-primary btn-lg col-lg-2" data-bs-toggle="button" id="cialdiniknop"><br><br>Commitment en consisentie<br><br><br></button>
-                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                <button type="button" class="btn btn-context btn-lg col-lg-2" data-bs-toggle="button" id="cialdiniknop"><br><br>Commitment en consisentie<br><br><br></button>
+                <button type="button" class="btn btn-context btn-lg col-lg-2"
                   data-bs-toggle="button" id="cialdiniknop"><br><br>Schaarste<br><br><br></button>
-                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                <button type="button" class="btn btn-context btn-lg col-lg-2"
                   data-bs-toggle="button" id="cialdiniknop"><br><br>Sympathie<br><br><br></button>
               </div><br>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                <button type="button" class="btn btn-context btn-lg col-lg-2"
                   data-bs-toggle="button" id="cialdiniknop"><br><br>Autoriteit<br><br><br></button>
-                <button type="button" class="btn btn-primary btn-lg col-lg-2" data-bs-toggle="button" id="cialdiniknop"><br><br>Sociale bewijskracht<br><br><br></button>
-                <button type="button" class="btn btn-primary btn-lg col-lg-2"
+                <button type="button" class="btn btn-context btn-lg col-lg-2" data-bs-toggle="button" id="cialdiniknop"><br><br>Sociale bewijskracht<br><br><br></button>
+                <button type="button" class="btn btn-context btn-lg col-lg-2"
                   data-bs-toggle="button" id="cialdiniknop"><br><br>Unity<br><br><br></button>
               </div><br>
             </div>
@@ -317,14 +415,14 @@
     <div class="accordion" id="accordionPanelsStayOpenExample">
 
       <!-- EXAMPLES -->
-      <div class="accordion-item">
+      <div class="accordion-item" style="border-color: #90CAF9; border-width: 2px;">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="background-color:#F7FBFF; box-shadow: 0px 0px">
             <h1>Examples</h1>
           </button>
         </h2>
-        <div id="collapseSix" class="accordion-collapse collapse" >
+        <div id="collapseSix" class="accordion-collapse collapse" style="background-color:#F7FBFF" >
           <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body">
             <div class="mb-3 d-grid justify-content-md-center">
@@ -389,20 +487,20 @@
     <div class="accordion" id="accordionPanelsStayOpenExample">
 
       <!-- GENERATE -->
-      <div class="accordion-item">
+      <div class="accordion-item" style="border-color: #FF8202; border-width: 2px;">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="background-color:#FFF5EB; box-shadow: 0px 0px">
             <h1>Generate</h1>
           </button>
         </h2>
-        <div id="collapseSeven" class="accordion-collapse collapse" >
+        <div id="collapseSeven" class="accordion-collapse collapse" style="background-color:#FFF5EB">
           <!-- data-bs-parent="#accordionExample" -->
           <div class="accordion-body">
             <div class="mb-3">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-              <button type="submit" class="btn btn-primary btn-lg col-sm-2"
+              <button type="submit" class="btn btn-generate btn-lg col-sm-2"
                 id="buttonGenerate" onclick="buttonClick1()"><br><br>GENERATE!<br><br><br></button>
             </div><br><br>
             <div class="mb-3">
@@ -415,6 +513,11 @@
             <textarea class="form-control" id="results" placeholder=""
                   rows="16" style="width: 800px;"></textarea>
                   </div>
+
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button type="submit" class="btn btn-generate btn-lg col-sm-2"
+                      id="buttonClip" onclick="copyToClipboard()"><i class="fa-regular fa-clipboard"></i> Copy</button>
+                  </div><br><br>
             
           </div>
         </div>

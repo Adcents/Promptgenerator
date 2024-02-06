@@ -1,4 +1,5 @@
 let generate = document.getElementById('buttonGenerate');
+let copyclipboard = document.getElementById('buttonClip');
 
 let publicStringTaak;
 let publicStringCial;
@@ -340,4 +341,16 @@ function buttonClick1() {
 
 
 
+};
+
+function copyToClipboard() {
+    // Verkrijg de tekst van het tekstvak met ID 'results'
+    const textToCopy = document.getElementById('results').value;
+
+    // Gebruik de Clipboard API om de tekst te kopiëren
+    navigator.clipboard.writeText(textToCopy).then(function() {
+        console.log('Tekst succesvol gekopieerd naar het klembord');
+    }, function(err) {
+        console.error('Fout bij het kopiëren van de tekst: ', err);
+    });
 }
